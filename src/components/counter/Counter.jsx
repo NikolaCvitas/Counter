@@ -68,7 +68,7 @@ class CounterButton extends Component  {
 
 //Define initial state in a constructor
 
-constructor() {
+/* constructor() {
   super(); //Error 1
 
   this.state = {
@@ -78,7 +78,7 @@ constructor() {
   this.increment = this.increment.bind(this);
   this.decrement = this.decrement.bind(this);
 
-}
+} */
 
 render(){
 
@@ -87,8 +87,8 @@ render(){
   return (
     <div className="counterButton">
     
-    <button onClick={this.increment}>+{this.props.by}</button>
-    <button onClick={this.decrement}>-{this.props.by}</button>
+    <button onClick={() => this.props.incrementMethod(this.props.by)}>+{this.props.by}</button>
+    <button onClick={() => this.props.decrementMethod(this.props.by)}>-{this.props.by}</button>
     {/*<span className="count" >{this.state.counter}</span>*/}
 
     </div>
@@ -98,7 +98,7 @@ render(){
 
 
     
-increment() { //Update state - counter++
+/* increment() { //Update state - counter++
   //console.log('increment');
   //this.state.counter++; //Bad Practice
 
@@ -110,9 +110,9 @@ increment() { //Update state - counter++
   );
   
   this.props.incrementMethod(this.props.by);
-}
+} */
 
-decrement(){
+/* decrement(){
 
   this.setState(
     (prevState) => {
@@ -123,7 +123,7 @@ decrement(){
   this.props.decrementMethod(this.props.by);
 
 }
-
+ */
 }
 
 
